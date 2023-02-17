@@ -1,3 +1,4 @@
+#include <fstream>
 #include <functional>
 #include <iostream>
 #include <istream>
@@ -11,40 +12,22 @@ string rtrim(const string &);
 vector<string> split(const string &);
 
 /*
- * Complete the 'plusMinus' function below.
+ * Complete the 'findMedian' function below.
  *
+ * The function is expected to return an INTEGER.
  * The function accepts INTEGER_ARRAY arr as parameter.
  */
 
-void plusMinus(vector<int> arr)
+int findMedian(vector<int> arr)
 {
-    int positive = 0;
-    int negative = 0;
-    int zeros = 0;
-
-    for (int &element : arr)
-    {
-        if (element > 0)
-        {
-            ++positive;
-        }
-        else if (element < 0)
-        {
-            ++negative;
-        } else {
-            ++zeros;
-        }
-    }
-
-    cout.fill(6);
-    cout.precision(6);
-    cout << positive/arr.size() << endl;
-    cout << negative/arr.size() << endl;
-    cout << zeros/arr.size() << endl;
+    sort(arr.begin(), arr.end());
+    return arr[(arr.size() - 1 / 2) + 1];
 }
 
 int main()
 {
+    ofstream fout(getenv("OUTPUT_PATH"));
+
     string n_temp;
     getline(cin, n_temp);
 
@@ -64,7 +47,11 @@ int main()
         arr[i] = arr_item;
     }
 
-    plusMinus(arr);
+    int result = findMedian(arr);
+
+    fout << result << "\n";
+
+    fout.close();
 
     return 0;
 }

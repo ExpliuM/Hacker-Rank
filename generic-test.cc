@@ -9,7 +9,7 @@
 
 using namespace std;
 
-TEST(test, c_tutorial_basic_data)
+TEST(hackerrank, generictest)
 {
     vector<string> filesToTest{
         "abstract-classes-polymorphism",
@@ -17,27 +17,27 @@ TEST(test, c_tutorial_basic_data)
         "c-tutorial-conditional-if-else",
         "c-tutorial-for-loop",
         "c-tutorial-functions",
+        // "find-the-meidian",
+        "one-week-preparation-kit-lonely-integer",
+        "one-week-preparation-kit-mini-max-sum",
         "one-week-preparation-kit-plus-minus",
+        "one-week-preparation-kit-time-conversion",
     };
 
     for (const string fileName : filesToTest)
     {
-        string pathToInputFiles = "../input";
+        stringstream pathToInputsSS;
+        pathToInputsSS << "../" << fileName << "/inputs";
+        string pathToInputs = pathToInputsSS.str();
 
-        stringstream pathSS;
-        pathSS << pathToInputFiles << "/" << fileName;
-        string path = pathSS.str();
-
-        for (const auto &entry : filesystem::directory_iterator(path))
+        for (const auto &entry : filesystem::directory_iterator(pathToInputs))
         {
             string testNumber = entry.path().stem();
             string pathToInputFile = entry.path();
 
-            string pathToResult = "../result";
-            string pathToExpected = "../expected";
-
             stringstream pathToOutputFileSS;
-            pathToOutputFileSS << pathToResult << "/" << fileName << "/" << testNumber << ".out";
+            pathToOutputFileSS << "../" << fileName << "/results"
+                               << "/" << testNumber << ".res";
             string pathToOutputFile = pathToOutputFileSS.str();
 
             stringstream commandSS;
@@ -47,7 +47,8 @@ TEST(test, c_tutorial_basic_data)
             system(command.c_str());
 
             stringstream pathToExpectedFileSS;
-            pathToExpectedFileSS << pathToExpected << "/" << fileName << "/" << testNumber << ".out";
+            pathToExpectedFileSS << "../" << fileName << "/expected"
+                                 << "/" << testNumber << ".out";
             string pathToExpectedFile = pathToExpectedFileSS.str();
 
             ifstream expectedIFS(pathToExpectedFile);
@@ -58,7 +59,7 @@ TEST(test, c_tutorial_basic_data)
             string resultContent((istreambuf_iterator<char>(resultIFS)),
                                  (istreambuf_iterator<char>()));
 
-            ASSERT_EQ(expectedContent, resultContent);
+            ASSERT_EQ(expectedContent, resultContent) << "fileName=" << fileName << ", testNumber=" << testNumber;
         }
     }
 }

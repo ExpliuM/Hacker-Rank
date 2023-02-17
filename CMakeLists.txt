@@ -7,18 +7,23 @@ list(APPEND CPP11_PROJECTS
     c-tutorial-conditional-if-else
     c-tutorial-for-loop
     c-tutorial-functions
+    # find-the-meidian
+    one-week-preparation-kit-lonely-integer
+    one-week-preparation-kit-mini-max-sum
     one-week-preparation-kit-plus-minus
+    one-week-preparation-kit-time-conversion
     )
 foreach(proj ${CPP11_PROJECTS})
     project(${proj})
     message("building project ${proj}")
-    add_executable(${proj} ${proj}.cpp)
+    add_executable(${proj} ${proj}/${proj}.cpp)
     target_link_libraries(${proj})
 endforeach()
 
 set(CMAKE_CXX_STANDARD 17)
 list(APPEND CPP17_PROJECTS
-    c-tutorial-basic-data-types)
+    # c-tutorial-basic-data-types
+    )
 foreach(proj ${CPP17_PROJECTS})
     project(${proj})
     message("building project ${proj}")
