@@ -1,7 +1,11 @@
-#include <fstream>
+/*
+ * Link: https://www.hackerrank.com/challenges/one-week-preparation-kit-diagonal-difference/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=preparation-kits&playlist_slugs%5B%5D=one-week-preparation-kit&playlist_slugs%5B%5D=one-week-day-two
+ */
+
 #include <functional>
 #include <iostream>
-#include <istream>
+#include <sstream>
+#include <fstream>
 #include <string>
 #include <vector>
 
@@ -12,42 +16,54 @@ string rtrim(const string &);
 vector<string> split(const string &);
 
 /*
- * Complete the 'findMedian' function below.
+ * Complete the 'diagonalDifference' function below.
  *
  * The function is expected to return an INTEGER.
- * The function accepts INTEGER_ARRAY arr as parameter.
+ * The function accepts 2D_INTEGER_ARRAY arr as parameter.
  */
 
-int findMedian(vector<int> arr)
+int diagonalDifference(vector<vector<int>> arr)
 {
-    sort(arr.begin(), arr.end());
-    return arr[(arr.size() - 1) / 2];
+    int leftToRightDiagSum = 0;
+    int rightToLeftDiagSum = 0;
+
+    for (int x = 0; x < arr.size(); ++x)
+    {
+        leftToRightDiagSum += arr[x][x];
+        rightToLeftDiagSum += arr[arr.size() - x - 1][x];
+    }
+    return abs(leftToRightDiagSum - rightToLeftDiagSum);
 }
 
 int main()
 {
-    // ofstream fout(getenv("OUTPUT_PATH"));
+    ofstream fout(getenv("OUTPUT_PATH"));
 
     string n_temp;
     getline(cin, n_temp);
 
     int n = stoi(ltrim(rtrim(n_temp)));
 
-    string arr_temp_temp;
-    getline(cin, arr_temp_temp);
-
-    vector<string> arr_temp = split(rtrim(arr_temp_temp));
-
-    vector<int> arr(n);
+    vector<vector<int>> arr(n);
 
     for (int i = 0; i < n; i++)
     {
-        int arr_item = stoi(arr_temp[i]);
+        arr[i].resize(n);
 
-        arr[i] = arr_item;
+        string arr_row_temp_temp;
+        getline(cin, arr_row_temp_temp);
+
+        vector<string> arr_row_temp = split(rtrim(arr_row_temp_temp));
+
+        for (int j = 0; j < n; j++)
+        {
+            int arr_row_item = stoi(arr_row_temp[j]);
+
+            arr[i][j] = arr_row_item;
+        }
     }
 
-    int result = findMedian(arr);
+    int result = diagonalDifference(arr);
 
     cout << result << "\n";
     // fout << result << "\n";

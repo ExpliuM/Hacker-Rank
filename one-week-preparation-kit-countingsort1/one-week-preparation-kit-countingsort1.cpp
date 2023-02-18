@@ -1,9 +1,14 @@
-#include <fstream>
+/*
+ * Link: https://www.hackerrank.com/challenges/one-week-preparation-kit-countingsort1/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=preparation-kits&playlist_slugs%5B%5D=one-week-preparation-kit&playlist_slugs%5B%5D=one-week-day-two
+ */
+
 #include <functional>
 #include <iostream>
-#include <istream>
+#include <sstream>
+#include <fstream>
 #include <string>
 #include <vector>
+#include <limits>
 
 using namespace std;
 
@@ -12,21 +17,35 @@ string rtrim(const string &);
 vector<string> split(const string &);
 
 /*
- * Complete the 'findMedian' function below.
+ * Complete the 'countingSort' function below.
  *
- * The function is expected to return an INTEGER.
+ * The function is expected to return an INTEGER_ARRAY.
  * The function accepts INTEGER_ARRAY arr as parameter.
  */
 
-int findMedian(vector<int> arr)
+vector<int> countingSort(vector<int> arr)
 {
-    sort(arr.begin(), arr.end());
-    return arr[(arr.size() - 1) / 2];
+    int minimum = numeric_limits<int>::max();
+    int maximum = numeric_limits<int>::min();
+    for (int element : arr)
+    {
+        maximum = max(maximum, element);
+        minimum = min(minimum, element);
+    }
+
+    vector<int> countingSortedVector(100);
+
+    for (int element : arr)
+    {
+        ++countingSortedVector[element];
+    }
+
+    return countingSortedVector;
 }
 
 int main()
 {
-    // ofstream fout(getenv("OUTPUT_PATH"));
+    ofstream fout(getenv("OUTPUT_PATH"));
 
     string n_temp;
     getline(cin, n_temp);
@@ -47,10 +66,22 @@ int main()
         arr[i] = arr_item;
     }
 
-    int result = findMedian(arr);
+    vector<int> result = countingSort(arr);
 
-    cout << result << "\n";
-    // fout << result << "\n";
+    for (size_t i = 0; i < result.size(); i++)
+    {
+        cout << result[i];
+        // fout << result[i];
+
+        if (i != result.size() - 1)
+        {
+            cout << " ";
+            // fout << " ";
+        }
+    }
+
+    cout << "\n";
+    // fout << "\n";
 
     // fout.close();
 

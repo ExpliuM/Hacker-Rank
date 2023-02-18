@@ -1,7 +1,11 @@
-#include <fstream>
+/*
+ * Link: https://www.hackerrank.com/challenges/one-week-preparation-kit-tower-breakers-1/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=preparation-kits&playlist_slugs%5B%5D=one-week-preparation-kit&playlist_slugs%5B%5D=one-week-day-three
+ */
+
 #include <functional>
 #include <iostream>
-#include <istream>
+#include <sstream>
+#include <fstream>
 #include <string>
 #include <vector>
 
@@ -12,45 +16,48 @@ string rtrim(const string &);
 vector<string> split(const string &);
 
 /*
- * Complete the 'findMedian' function below.
+ * Complete the 'towerBreakers' function below.
  *
  * The function is expected to return an INTEGER.
- * The function accepts INTEGER_ARRAY arr as parameter.
+ * The function accepts following parameters:
+ *  1. INTEGER n
+ *  2. INTEGER m
  */
 
-int findMedian(vector<int> arr)
+int towerBreakers(int n, int m)
 {
-    sort(arr.begin(), arr.end());
-    return arr[(arr.size() - 1) / 2];
+    if (m == 1 || n % 2 == 0)
+    {
+        return 2;
+    }
+    return 1;
 }
 
 int main()
 {
     // ofstream fout(getenv("OUTPUT_PATH"));
 
-    string n_temp;
-    getline(cin, n_temp);
+    string t_temp;
+    getline(cin, t_temp);
 
-    int n = stoi(ltrim(rtrim(n_temp)));
+    int t = stoi(ltrim(rtrim(t_temp)));
 
-    string arr_temp_temp;
-    getline(cin, arr_temp_temp);
-
-    vector<string> arr_temp = split(rtrim(arr_temp_temp));
-
-    vector<int> arr(n);
-
-    for (int i = 0; i < n; i++)
+    for (int t_itr = 0; t_itr < t; t_itr++)
     {
-        int arr_item = stoi(arr_temp[i]);
+        string first_multiple_input_temp;
+        getline(cin, first_multiple_input_temp);
 
-        arr[i] = arr_item;
+        vector<string> first_multiple_input = split(rtrim(first_multiple_input_temp));
+
+        int n = stoi(first_multiple_input[0]);
+
+        int m = stoi(first_multiple_input[1]);
+
+        int result = towerBreakers(n, m);
+
+        cout << result << "\n";
+        // fout << result << "\n";
     }
-
-    int result = findMedian(arr);
-
-    cout << result << "\n";
-    // fout << result << "\n";
 
     // fout.close();
 

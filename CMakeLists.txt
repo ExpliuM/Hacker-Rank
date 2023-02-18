@@ -2,17 +2,26 @@ cmake_minimum_required(VERSION 3.25)
 
 # set(CMAKE_BUILD_TYPE Debug)
 
+set(CMAKE_CXX_STANDARD 11)
 list(APPEND CPP11_PROJECTS
     abstract-classes-polymorphism
     c-tutorial-conditional-if-else
     c-tutorial-for-loop
     c-tutorial-functions
-    # find-the-meidian
+    find-the-meidian
+    fliping-matrix
+    one-week-preparation-kit-caesar-cipher-1
+    one-week-preparation-kit-countingsort1
+    one-week-preparation-kit-diagonal-difference
+    one-week-preparation-kit-grid-challenge
     one-week-preparation-kit-lonely-integer
     one-week-preparation-kit-mini-max-sum
     one-week-preparation-kit-plus-minus
     one-week-preparation-kit-time-conversion
+    one-week-preparation-kit-tower-breakers-1
+    one-week-preparation-kit-zig-zag-sequence
     )
+    
 foreach(proj ${CPP11_PROJECTS})
     project(${proj})
     message("building project ${proj}")
@@ -22,12 +31,12 @@ endforeach()
 
 set(CMAKE_CXX_STANDARD 17)
 list(APPEND CPP17_PROJECTS
-    # c-tutorial-basic-data-types
+    c-tutorial-basic-data-types
     )
 foreach(proj ${CPP17_PROJECTS})
     project(${proj})
     message("building project ${proj}")
-    add_executable(${proj} ${proj}.cpp)
+    add_executable(${proj} ${proj}/${proj}.cpp)
     target_link_libraries(${proj})
 endforeach()
 

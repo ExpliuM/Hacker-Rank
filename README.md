@@ -1,2 +1,1 @@
-# leetcode
 # Hacker-Rank
