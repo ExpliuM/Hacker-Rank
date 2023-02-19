@@ -17,18 +17,19 @@ TEST(hackerrank, generictest)
         "c-tutorial-conditional-if-else",
         "c-tutorial-for-loop",
         "c-tutorial-functions",
+        "caesar-cipher-1",
+        "countingsort1",
+        "diagonal-difference",
         "find-the-meidian",
         "fliping-matrix",
-        "one-week-preparation-kit-caesar-cipher-1",
-        "one-week-preparation-kit-countingsort1",
-        "one-week-preparation-kit-diagonal-difference",
-        "one-week-preparation-kit-grid-challenge",
-        "one-week-preparation-kit-lonely-integer",
-        "one-week-preparation-kit-mini-max-sum",
-        "one-week-preparation-kit-plus-minus",
-        "one-week-preparation-kit-time-conversion",
-        "one-week-preparation-kit-tower-breakers-1",
-        "one-week-preparation-kit-zig-zag-sequence"};
+        "grid-challenge",
+        "lonely-integer",
+        "mini-max-sum",
+        "plus-minus",
+        "recursive-digit-sum",
+        "time-conversion",
+        "tower-breakers-1",
+        "zig-zag-sequence"};
 
     for (const string fileName : filesToTest)
     {

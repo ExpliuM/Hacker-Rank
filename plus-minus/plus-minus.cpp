@@ -1,5 +1,5 @@
 /*
- * Link: https://www.hackerrank.com/challenges/one-week-preparation-kit-mini-max-sum/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=preparation-kits&playlist_slugs%5B%5D=one-week-preparation-kit&playlist_slugs%5B%5D=one-week-day-one
+ * Link: https://www.hackerrank.com/challenges/plus-minus/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=preparation-kits&playlist_slugs%5B%5D=one-week-preparation-kit&playlist_slugs%5B%5D=one-week-day-one
  */
 
 #include <functional>
@@ -15,44 +15,61 @@ string rtrim(const string &);
 vector<string> split(const string &);
 
 /*
- * Complete the 'miniMaxSum' function below.
+ * Complete the 'plusMinus' function below.
  *
  * The function accepts INTEGER_ARRAY arr as parameter.
  */
 
-void miniMaxSum(vector<int> arr)
+void plusMinus(vector<int> arr)
 {
-    long long sum = 0;
-    int minimum = arr[0];
-    int maximum = arr[0];
+    int positive = 0;
+    int negative = 0;
+    int zeros = 0;
+
     for (int element : arr)
     {
-        sum += element;
-        minimum = min(element, minimum);
-        maximum = max(element, maximum);
+        if (element > 0)
+        {
+            ++positive;
+        }
+        else if (element < 0)
+        {
+            ++negative;
+        }
+        else
+        {
+            ++zeros;
+        }
     }
 
-    cout << sum - maximum << " " << sum - minimum;
+    cout.precision(6);
+    cout << fixed << ((float)positive) / arr.size() << endl;
+    cout << fixed << ((float)negative) / arr.size() << endl;
+    cout << fixed << ((float)zeros) / arr.size() << endl;
 }
 
 int main()
 {
+    string n_temp;
+    getline(cin, n_temp);
+
+    int n = stoi(ltrim(rtrim(n_temp)));
 
     string arr_temp_temp;
     getline(cin, arr_temp_temp);
 
     vector<string> arr_temp = split(rtrim(arr_temp_temp));
 
-    vector<int> arr(5);
+    vector<int> arr(n);
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < n; i++)
     {
         int arr_item = stoi(arr_temp[i]);
 
         arr[i] = arr_item;
     }
 
-    miniMaxSum(arr);
+    plusMinus(arr);
 
     return 0;
 }

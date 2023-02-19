@@ -15,7 +15,7 @@
             "type": "cppdbg",
             "setupCommands": [
                 {
-                    "text": "settings set target.input-path ${workspaceFolder}/${fileBasenameNoExtension}/inputs/5.in"
+                    "text": "settings set target.input-path ${workspaceFolder}/${fileBasenameNoExtension}/inputs/1.in"
                 }
             ]
         }
