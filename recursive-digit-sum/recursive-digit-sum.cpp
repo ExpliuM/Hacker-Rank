@@ -28,7 +28,7 @@ int superDigit(string n, int k)
 {
     const char *nCStr = n.c_str();
     long long number = 0;
-    for (int i = 0; i < n.size(); ++i)
+    for (size_t i = 0; i < n.size(); ++i)
     {
         number += (nCStr[i] - '0') * k;
     }

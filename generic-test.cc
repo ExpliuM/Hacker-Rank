@@ -13,6 +13,7 @@ TEST(hackerrank, generictest)
 {
     vector<string> filesToTest{
         "abstract-classes-polymorphism",
+        "balanced-brackets",
         "c-tutorial-basic-data-types",
         "c-tutorial-conditional-if-else",
         "c-tutorial-for-loop",
@@ -30,6 +31,7 @@ TEST(hackerrank, generictest)
         "plus-minus",
         "queue-using-two-stacks",
         "recursive-digit-sum",
+        "simple-text-editor",
         "time-conversion",
         "tower-breakers-1",
         "zig-zag-sequence"};

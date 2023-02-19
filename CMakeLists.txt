@@ -5,6 +5,7 @@ cmake_minimum_required(VERSION 3.25)
 set(CMAKE_CXX_STANDARD 11)
 list(APPEND CPP11_PROJECTS
     abstract-classes-polymorphism
+    balanced-brackets
     c-tutorial-conditional-if-else
     c-tutorial-for-loop
     c-tutorial-functions
@@ -21,6 +22,7 @@ list(APPEND CPP11_PROJECTS
     plus-minus
     queue-using-two-stacks
     recursive-digit-sum
+    simple-text-editor
     time-conversion
     tower-breakers-1
     zig-zag-sequence
