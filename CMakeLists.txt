@@ -8,15 +8,18 @@ list(APPEND CPP11_PROJECTS
     c-tutorial-conditional-if-else
     c-tutorial-for-loop
     c-tutorial-functions
-    find-the-meidian
-    fliping-matrix
     caesar-cipher-1
     countingsort1
     diagonal-difference
+    find-the-meidian
+    fliping-matrix
     grid-challenge
     lonely-integer
+    merge-two-sorted-linked-lists
     mini-max-sum
+    new-year-chaos
     plus-minus
+    queue-using-two-stacks
     recursive-digit-sum
     time-conversion
     tower-breakers-1
