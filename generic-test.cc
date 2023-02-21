@@ -24,17 +24,25 @@ TEST(hackerrank, generictest)
         "find-the-meidian",
         "fliping-matrix",
         "grid-challenge",
+        "jesse-and-cookies",
         "lonely-integer",
         "merge-two-sorted-linked-lists",
+        "min-time",
         "mini-max-sum",
-        // "new-year-chaos",
+        "palindrome-index",
         "plus-minus",
         "queue-using-two-stacks",
         "recursive-digit-sum",
         "simple-text-editor",
+        "swap_scores"
         "time-conversion",
         "tower-breakers-1",
-        "zig-zag-sequence"};
+        "tree-huffman-decoding",
+        "truck-tour",
+        "zig-zag-sequence"
+        // "lego-blocks",
+        // "new-year-chaos",
+    };
 
     for (const string fileName : filesToTest)
     {
