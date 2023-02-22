@@ -1,3 +1,14 @@
+/**
+ * @file fliping-matrix.cpp
+ * @author Alexander Khvolis(ExpliuM)
+ * @link https://www.hackerrank.com/challenges/fliping-matrix/problem?isFullScreen=true
+ * @version 0.1
+ * @date 2023-02-18
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #include <functional>
 #include <iostream>
 #include <sstream>

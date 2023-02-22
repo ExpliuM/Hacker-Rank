@@ -1,6 +1,14 @@
-/*
- * Link: https://www.hackerrank.com/challenges/one-week-preparation-kit-jesse-and-cookies/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=preparation-kits&playlist_slugs%5B%5D=one-week-preparation-kit&playlist_slugs%5B%5D=one-week-day-six
+/**
+ * @file jesse-and-cookies.cpp
+ * @author Alexander Khvolis(ExpliuM)
+ * @link https://www.hackerrank.com/challenges/jesse-and-cookies/problem?isFullScreen=true
+ * @version 0.1
+ * @date 2023-02-21
+ * 
+ * @copyright Copyright (c) 2023
+ * 
  */
+
 #include <functional>
 #include <iostream>
 #include <sstream>

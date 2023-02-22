@@ -1,6 +1,14 @@
-/*
- * Link:
+/**
+ * @file palindrome-index.cpp
+ * @author Alexander Khvolis(ExpliuM)
+ * @link https://www.hackerrank.com/challenges/palindrome-index/problem?isFullScreen=true
+ * @version 0.1
+ * @date 2023-02-21
+ * 
+ * @copyright Copyright (c) 2023
+ * 
  */
+
 #include <functional>
 #include <iostream>
 #include <sstream>

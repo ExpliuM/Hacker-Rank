@@ -1,3 +1,14 @@
+/**
+ * @file find-the-meidian.cpp
+ * @author Alexander Khvolis(ExpliuM)
+ * @link https://www.hackerrank.com/challenges/find-the-meidian/problem?isFullScreen=true
+ * @version 0.1
+ * @date 2023-02-17
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #include <fstream>
 #include <functional>
 #include <iostream>

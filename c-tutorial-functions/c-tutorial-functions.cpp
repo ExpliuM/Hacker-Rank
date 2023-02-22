@@ -1,5 +1,12 @@
 /**
- * Link: https://www.hackerrank.com/challenges/c-tutorial-functions/problem?isFullScreen=true
+ * @file c-tutorial-functions.cpp
+ * @author Alexander Khvolis(ExpliuM)
+ * @link https://www.hackerrank.com/challenges/c-tutorial-functions/problem?isFullScreen=true
+ * @version 0.1
+ * @date 2023-02-17
+ * 
+ * @copyright Copyright (c) 2023
+ * 
  */
 
 #include <iostream>

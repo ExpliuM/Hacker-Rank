@@ -1,6 +1,14 @@
-/*
- * Link: https://www.hackerrank.com/challenges/one-week-preparation-kit-merge-two-sorted-linked-lists/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=preparation-kits&playlist_slugs%5B%5D=one-week-preparation-kit&playlist_slugs%5B%5D=one-week-day-five
+/**
+ * @file merge-two-sorted-linked-lists.cpp
+ * @author Alexander Khvolis(ExpliuM)
+ * @link https://www.hackerrank.com/challenges/merge-two-sorted-linked-lists/problem?isFullScreen=true
+ * @version 0.1
+ * @date 2023-02-19
+ * 
+ * @copyright Copyright (c) 2023
+ * 
  */
+
 #include <functional>
 #include <iostream>
 #include <sstream>

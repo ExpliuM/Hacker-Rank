@@ -1,5 +1,12 @@
-/*
- * Link: https://www.hackerrank.com/challenges/countingsort1/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=preparation-kits&playlist_slugs%5B%5D=one-week-preparation-kit&playlist_slugs%5B%5D=one-week-day-two
+/**
+ * @file countingsort1.cpp
+ * @author Alexander Khvolis(ExpliuM)
+ * @link https://www.hackerrank.com/challenges/countingsort1/problem?isFullScreen=true
+ * @version 0.1
+ * @date 2023-02-18
+ * 
+ * @copyright Copyright (c) 2023
+ * 
  */
 
 #include <functional>

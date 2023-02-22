@@ -1,6 +1,14 @@
-/*
- * Link: 
+/**
+ * @file swap_scores.cpp
+ * @author Alexander Khvolis(ExpliuM)
+ * @link https://www.hackerrank.com/challenges/swap_scores/problem?isFullScreen=true
+ * @version 0.1
+ * @date 2023-02-21
+ * 
+ * @copyright Copyright (c) 2023
+ * 
  */
+
 #include <iostream>
 #include <string>
 #include <vector>

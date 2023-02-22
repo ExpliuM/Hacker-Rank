@@ -1,6 +1,14 @@
-/*
- * Link:
+/**
+ * @file min-time.cpp
+ * @author Alexander Khvolis(ExpliuM)
+ * @link https://www.hackerrank.com/challenges/min-time/problem?isFullScreen=true
+ * @version 0.1
+ * @date 2023-02-21
+ * 
+ * @copyright Copyright (c) 2023
+ * 
  */
+
 #include <algorithm>
 #include <functional>
 #include <iostream>

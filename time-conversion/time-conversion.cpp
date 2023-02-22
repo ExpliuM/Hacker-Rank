@@ -1,5 +1,12 @@
-/*
- * Link: https://www.hackerrank.com/challenges/time-conversion/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=preparation-kits&playlist_slugs%5B%5D=one-week-preparation-kit&playlist_slugs%5B%5D=one-week-day-one
+/**
+ * @file time-conversion.cpp
+ * @author Alexander Khvolis(ExpliuM)
+ * @link https://www.hackerrank.com/challenges/time-conversion/problem?isFullScreen=true
+ * @version 0.1
+ * @date 2023-02-17
+ * 
+ * @copyright Copyright (c) 2023
+ * 
  */
 
 #include <functional>

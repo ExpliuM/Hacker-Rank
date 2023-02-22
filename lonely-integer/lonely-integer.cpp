@@ -1,3 +1,14 @@
+/**
+ * @file lonely-integer.cpp
+ * @author Alexander Khvolis(ExpliuM)
+ * @link https://www.hackerrank.com/challenges/lonely-integer/problem?isFullScreen=true
+ * @version 0.1
+ * @date 2023-02-17
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #include <map>
 #include <functional>
 #include <iostream>
