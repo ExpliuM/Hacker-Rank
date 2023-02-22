@@ -1,6 +1,15 @@
-/*
- * Link: truckTour
+/**
+ * @file truck-tour.cpp
+ * @author Alexander Khvolis(ExpliuM)
+ * @link https://www.hackerrank.com/challenges/truck-tour/problem?isFullScreen=true
+ * @version 0.1
+ * @date 2023-02-21
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ * 
  */
+
 #include <functional>
 #include <iostream>
 #include <sstream>

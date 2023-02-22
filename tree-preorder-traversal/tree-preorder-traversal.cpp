@@ -1,13 +1,15 @@
 /**
- * @file tree-huffman-decoding.cpp
+ * @file tree-preorder-traversal.cpp
  * @author Alexander Khvolis(ExpliuM)
- * @link https://www.hackerrank.com/challenges/tree-huffman-decoding/problem?isFullScreen=true
+ * @link https://www.hackerrank.com/challenges/tree-preorder-traversal/problem?isFullScreen=true
  * @version 0.1
  * @date 2023-02-21
  * 
  * @copyright Copyright (c) 2023
  * 
+ * 
  */
+
 #include <functional>
 #include <iostream>
 #include <sstream>
