@@ -66,7 +66,6 @@ TEST(hackerrank, generictest)
             string command = commandSS.str();
 
             system(command.c_str());
-            sleep(0.5);
 
             stringstream pathToExpectedFileSS;
             pathToExpectedFileSS << "../" << fileName << "/expected"
