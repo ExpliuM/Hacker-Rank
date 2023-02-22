@@ -51,7 +51,7 @@ int truckTour(vector<vector<int>> petrolpumps)
 
 int main()
 {
-    ofstream fout(getenv("OUTPUT_PATH"));
+    // ofstream fout(getenv("OUTPUT_PATH"));
 
     string n_temp;
     getline(cin, n_temp);
@@ -79,9 +79,10 @@ int main()
 
     int result = truckTour(petrolpumps);
 
-    fout << result << "\n";
+    cout << result << "\n";
+    // fout << result << "\n";
 
-    fout.close();
+    // fout.close();
 
     return 0;
 }

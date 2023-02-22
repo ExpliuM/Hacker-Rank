@@ -9,6 +9,7 @@ list(APPEND CPP11_PROJECTS
     c-tutorial-conditional-if-else
     c-tutorial-for-loop
     c-tutorial-functions
+    c-tutorial-pointer
     caesar-cipher-1
     countingsort1
     diagonal-difference
@@ -31,7 +32,7 @@ list(APPEND CPP11_PROJECTS
     time-conversion
     tower-breakers-1
     tree-huffman-decoding
-    # truck-tour
+    truck-tour
     # zig-zag-sequence
     )
     

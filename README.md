@@ -8,6 +8,7 @@ Solution for HackerRank challanges
 | C Tutorial | [Conditional if else](https://www.hackerrank.com/challenges/c-tutorial-conditional-if-else/problem) | [c-tutorial-conditional-if-else.cpp](c-tutorial-conditional-if-else/c-tutorial-conditional-if-else.cpp) |
 | C Tutorial | [For loop](https://www.hackerrank.com/challenges/c-tutorial-for-loop/problem) | [c-tutorial-for-loop.cpp](c-tutorial-for-loop/c-tutorial-for-loop.cpp) |
 | C Tutorial | [Functions](https://www.hackerrank.com/challenges/c-tutorial-functions/problem) | [c-tutorial-functions.cpp](c-tutorial-functions/c-tutorial-functions.cpp) |
+| C Tutorial | [Functions](https://www.hackerrank.com/challenges/c-tutorial-pointer/problem) | [c-tutorial-pointer.cpp](c-tutorial-pointer/c-tutorial-pointer.cpp) |
 | | [Abstract classes polymorphism](https://www.hackerrank.com/challenges/abstract-classes-polymorphism/problem) | [abstract-classes-polymorphism.cpp](abstract-classes-polymorphism/abstract-classes-polymorphism.cpp) |
 | | [Balanced brackets](https://www.hackerrank.com/challenges/balanced-brackets/problem) | [balanced-brackets.cpp](/balanced-brackets.cpp) |
 | | [Caesar cipher 1](https://www.hackerrank.com/challenges/caesar-cipher-1/problem) | [caesar-cipher-1](caesar-cipher-1/caesar-cipher-1.cpp) |

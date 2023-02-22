@@ -18,6 +18,7 @@ TEST(hackerrank, generictest)
         "c-tutorial-conditional-if-else",
         "c-tutorial-for-loop",
         "c-tutorial-functions",
+        "c-tutorial-pointer",
         "caesar-cipher-1",
         "countingsort1",
         "diagonal-difference",
@@ -34,7 +35,7 @@ TEST(hackerrank, generictest)
         "queue-using-two-stacks",
         "recursive-digit-sum",
         "simple-text-editor",
-        "swap_scores"
+        "swap_scores",
         "time-conversion",
         "tower-breakers-1",
         "tree-huffman-decoding",
@@ -65,6 +66,7 @@ TEST(hackerrank, generictest)
             string command = commandSS.str();
 
             system(command.c_str());
+            sleep(0.5);
 
             stringstream pathToExpectedFileSS;
             pathToExpectedFileSS << "../" << fileName << "/expected"

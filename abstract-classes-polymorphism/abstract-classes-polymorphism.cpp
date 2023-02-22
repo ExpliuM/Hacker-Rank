@@ -1,3 +1,14 @@
+/**
+ * @file abstract-classes-polymorphism.cpp
+ * @author Alexander Khvolis(ExpliuM)
+ * @link https://www.hackerrank.com/challenges/abstract-classes-polymorphism/problem?isFullScreen=true 
+ * @version 0.1
+ * @date 2023-02-17
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #include <iostream>
 #include <vector>
 #include <map>
@@ -19,6 +30,7 @@ struct Node
 
 class Cache
 {
+
 protected:
    map<int, Node *> mp;            // map the key to the node in the linked list
    int cp;                         // capacity
@@ -132,7 +144,7 @@ public:
    }
 };
 
-int main(int argc, char *argv[])
+int main()
 {
    int n, capacity, i;
    cin >> n >> capacity;
@@ -154,6 +166,5 @@ int main(int argc, char *argv[])
          l.set(key, value);
       }
    }
-
    return 0;
 }
