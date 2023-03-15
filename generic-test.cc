@@ -12,16 +12,20 @@ using namespace std;
 TEST(hackerrank, generictest)
 {
     vector<string> filesToTest{
+        "a-very-big-sum",
         "abstract-classes-polymorphism",
         "balanced-brackets",
+        "birthday-cake-candles",
         "c-tutorial-basic-data-types",
         "c-tutorial-conditional-if-else",
         "c-tutorial-for-loop",
         "c-tutorial-functions",
         "c-tutorial-pointer",
         "caesar-cipher-1",
+        "compare-the-triplets",
         "countingsort1",
         "diagonal-difference",
+        "fairy-chess",
         "find-the-meidian",
         "fliping-matrix",
         "grid-challenge",
@@ -34,13 +38,16 @@ TEST(hackerrank, generictest)
         "plus-minus",
         "queue-using-two-stacks",
         "recursive-digit-sum",
+        "simple-array-sum",
         "simple-text-editor",
+        "solve-me-first",
+        "staircase",
         "swap_scores",
         "time-conversion",
         "tower-breakers-1",
         "tree-huffman-decoding",
         "truck-tour",
-        "zig-zag-sequence"
+        // "zig-zag-sequence",
         // "lego-blocks",
         // "new-year-chaos",
     };

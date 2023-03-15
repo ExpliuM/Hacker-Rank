@@ -4,9 +4,9 @@
  * @link https://www.hackerrank.com/challenges/palindrome-index/problem?isFullScreen=true
  * @version 0.1
  * @date 2023-02-21
- * 
+ *
  * @copyright Copyright (c) 2023
- * 
+ *
  */
 
 #include <functional>
@@ -27,7 +27,6 @@ string rtrim(const string &);
  * The function is expected to return an INTEGER.
  * The function accepts STRING s as parameter.
  */
-
 int isPalindrome(string s)
 {
     for (size_t i = 0; i < (s.size() + 1) / 2; ++i)

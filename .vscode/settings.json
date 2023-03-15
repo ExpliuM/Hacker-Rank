@@ -1,10 +1,26 @@
 {
     "cSpell.words": [
         "ExpliuM",
+        "generictest",
+        "hackerrank",
         "Khvolis"
     ],
     "files.associations": {
         "functional": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "string": "cpp",
+        "iosfwd": "cpp",
+        "iostream": "cpp",
+        "vector": "cpp",
+        "array": "cpp",
+        "string_view": "cpp",
+        "filesystem": "cpp",
+        "limits": "cpp",
+        "set": "cpp",
+        "__bit_reference": "cpp",
+        "__config": "cpp",
+        "type_traits": "cpp",
+        "__node_handle": "cpp",
+        "stack": "cpp"
     }
 }

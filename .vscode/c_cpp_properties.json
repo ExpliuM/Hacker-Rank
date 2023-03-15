@@ -3,10 +3,10 @@
         {
             "name": "Mac",
             "includePath": [
+                "/opt/homebrew/Cellar/googletest/1.13.0/include"
             ],
             "defines": [],
-            "macFrameworkPath": [
-            ],
+            "macFrameworkPath": [],
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c11",
             "cppStandard": "c++11",

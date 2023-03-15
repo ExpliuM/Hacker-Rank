@@ -1,18 +1,21 @@
 cmake_minimum_required(VERSION 3.25)
 
 # set(CMAKE_BUILD_TYPE Debug)
-
 set(CMAKE_CXX_STANDARD 11)
 list(APPEND CPP11_PROJECTS
+    a-very-big-sum
     abstract-classes-polymorphism
     balanced-brackets
+    birthday-cake-candles
     c-tutorial-conditional-if-else
     c-tutorial-for-loop
     c-tutorial-functions
     c-tutorial-pointer
     caesar-cipher-1
+    compare-the-triplets
     countingsort1
     diagonal-difference
+    fairy-chess
     find-the-meidian
     fliping-matrix
     grid-challenge
@@ -27,7 +30,10 @@ list(APPEND CPP11_PROJECTS
     plus-minus
     queue-using-two-stacks
     recursive-digit-sum
+    simple-array-sum
     simple-text-editor
+    solve-me-first
+    staircase
     swap_scores
     time-conversion
     tower-breakers-1
@@ -58,6 +64,7 @@ endforeach()
 project(tests)
 enable_language(C CXX)
 
+# enable_testing()
 find_package(GTest REQUIRED)
 
 # GoogleTest requires at least C++14
@@ -73,5 +80,6 @@ enable_testing()
 
 add_executable(tests ${TEST_FILES})
 target_link_libraries(tests GTest::gtest_main)
-# include(GoogleTest)
+
+include(GoogleTest)
 gtest_discover_tests(tests)
