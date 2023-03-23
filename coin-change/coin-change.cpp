@@ -1,20 +1,18 @@
 /**
- * @file recursive-digit-sum.cpp
+ * @file coin-change.cpp
  * @author Alexander Khvolis(ExpliuM)
- * @link https://www.hackerrank.com/challenges/recursive-digit-sum/problem?isFullScreen=true
+ * @link https://www.hackerrank.com/challenges/coin-change/problem?isFullScreen=true
  * @version 0.1
- * @date 2023-02-18
- * 
+ * @date 2023-03-15
+ *
  * @copyright Copyright (c) 2023
- * 
+ *
  */
-
-#include <functional>
 #include <iostream>
-#include <sstream>
-#include <fstream>
 #include <string>
 #include <vector>
+#include <unordered_map>
+// #include <bits/stdc++.h>
 
 using namespace std;
 
@@ -23,29 +21,34 @@ string rtrim(const string &);
 vector<string> split(const string &);
 
 /*
- * Complete the 'superDigit' function below.
+ * Complete the 'getWays' function below.
  *
- * The function is expected to return an INTEGER.
+ * The function is expected to return a LONG_INTEGER.
  * The function accepts following parameters:
- *  1. STRING n
- *  2. INTEGER k
+ *  1. INTEGER n
+ *  2. LONG_INTEGER_ARRAY c
  */
-int superDigit(string n, int k)
+
+long getWays(int n, vector<long> &c)
 {
-    const char *nCStr = n.c_str();
-    long long number = 0;
-    for (size_t i = 0; i < n.size(); ++i)
+    long a[n + 1];
+
+    for (size_t i = 0; i <= n; i++)
     {
-        number += (nCStr[i] - '0') * k;
+        a[i] = 0;
     }
 
-    if (number > 10)
+    a[0] = 1;
+
+    for (long coin : c)
     {
-        string numberAsString = to_string(number);
-        return superDigit(numberAsString, 1);
+        for (size_t i = coin; i <= n; i++)
+        {
+            a[i] += a[i - coin];
+        }
     }
 
-    return number;
+    return a[n];
 }
 
 int main()
@@ -57,14 +60,30 @@ int main()
 
     vector<string> first_multiple_input = split(rtrim(first_multiple_input_temp));
 
-    string n = first_multiple_input[0];
+    int n = stoi(first_multiple_input[0]);
 
-    int k = stoi(first_multiple_input[1]);
+    int m = stoi(first_multiple_input[1]);
 
-    int result = superDigit(n, k);
+    string c_temp_temp;
+    getline(cin, c_temp_temp);
 
-    cout << result << "\n";
-    // fout << result << "\n";
+    vector<string> c_temp = split(rtrim(c_temp_temp));
+
+    vector<long> c(m);
+
+    for (int i = 0; i < m; i++)
+    {
+        long c_item = stol(c_temp[i]);
+
+        c[i] = c_item;
+    }
+
+    // Print the number of ways of making change for 'n' units using coins having the values given by 'c'
+
+    long ways = getWays(n, c);
+
+    cout << ways << "\n";
+    // fout << ways << "\n";
 
     // fout.close();
 

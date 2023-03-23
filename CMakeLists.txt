@@ -6,18 +6,22 @@ list(APPEND CPP11_PROJECTS
     a-very-big-sum
     abstract-classes-polymorphism
     balanced-brackets
+    big-sorting
     birthday-cake-candles
     c-tutorial-conditional-if-else
     c-tutorial-for-loop
     c-tutorial-functions
     c-tutorial-pointer
     caesar-cipher-1
+    coin-change
     compare-the-triplets
     countingsort1
+    tutorial-intro
     diagonal-difference
+    equal
     fairy-chess
     find-the-meidian
-    fliping-matrix
+    flipping-the-matrix
     grid-challenge
     jesse-and-cookies
     lego-blocks
@@ -35,10 +39,12 @@ list(APPEND CPP11_PROJECTS
     solve-me-first
     staircase
     swap_scores
+    the-power-sum
     time-conversion
     tower-breakers-1
     tree-huffman-decoding
     truck-tour
+    # crossword-puzzle
     # zig-zag-sequence
     )
     
