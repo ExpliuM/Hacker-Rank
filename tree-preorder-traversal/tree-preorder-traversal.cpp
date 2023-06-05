@@ -4,128 +4,110 @@
  * @link https://www.hackerrank.com/challenges/tree-preorder-traversal/problem?isFullScreen=true
  * @version 0.1
  * @date 2023-02-21
- * 
+ *
  * @copyright Copyright (c) 2023
- * 
- * 
+ *
+ *
  */
-
+#include <fstream>
 #include <functional>
 #include <iostream>
 #include <sstream>
-#include <fstream>
 #include <string>
 #include <vector>
+// #include <bits/stdc++.h>
 
 using namespace std;
 
-typedef struct node {
-    int freq;
-    char data;
-    node * left;
-    node * right;
-} node;
-
-struct deref:public binary_function<node*, node*, bool> {
-  	bool operator()(const node * a, const node * b)const {
-        return a->freq > b->freq;
+class Node
+{
+public:
+    int data;
+    Node *left;
+    Node *right;
+    Node(int d)
+    {
+        data = d;
+        left = NULL;
+        right = NULL;
     }
 };
 
-typedef priority_queue<node *, vector<node*>, deref> spq;
+class Solution
+{
+public:
+    Node *insert(Node *root, int data)
+    {
+        if (root == NULL)
+        {
+            return new Node(data);
+        }
+        else
+        {
+            Node *cur;
+            if (data <= root->data)
+            {
+                cur = insert(root->left, data);
+                root->left = cur;
+            }
+            else
+            {
+                cur = insert(root->right, data);
+                root->right = cur;
+            }
 
-node * huffman_hidden(string s) {
-
-    spq pq;
-    vector<int>count(256,0);
-  
-    for(int i = 0; i < s.length(); i++ ) {
-        count[s[i]]++;
+            return root;
+        }
     }
-    
-    for(int i=0; i < 256; i++) {
-        
-        node * n_node = new node;
-        n_node->left = NULL;
-        n_node->right = NULL;
-        n_node->data = (char)i;
-        n_node->freq = count[i];
-      
-        if( count[i] != 0 )
-        	pq.push(n_node);
-      
+
+    /* you only have to complete the function given below.
+    Node is defined as
+
+    class Node {
+        public:
+            int data;
+            Node *left;
+            Node *right;
+            Node(int d) {
+                data = d;
+                left = NULL;
+                right = NULL;
+            }
+    };
+
+    */
+
+    void preOrder(Node *root)
+    {
+        if (root == nullptr)
+        {
+            return;
+        }
+
+        std::cout << root->data << " ";
+        preOrder(root->left);
+        preOrder(root->right);
     }
-    
-    while( pq.size() != 1 ) {
-      
-        node * left = pq.top();
-        pq.pop();
-        node * right = pq.top();
-        pq.pop();
-        node * comb = new node;
-        comb->freq = left->freq + right->freq;
-        comb->data = '\0';
-        comb->left = left;
-        comb->right = right;
-        pq.push(comb);
-      
+
+}; // End of Solution
+
+int main()
+{
+
+    Solution myTree;
+    Node *root = NULL;
+
+    int t;
+    int data;
+
+    std::cin >> t;
+
+    while (t-- > 0)
+    {
+        std::cin >> data;
+        root = myTree.insert(root, data);
     }
-    
-    return pq.top();
-    
-}
 
-void print_codes_hidden(node * root, string code, map<char, string>&mp) {
-    
-  	if(root == NULL)
-        return;
-    
-  	if(root->data != '\0') {
-        mp[root->data] = code;
-    }
-  
-    print_codes_hidden(root->left, code+'0', mp);
-    print_codes_hidden(root->right, code+'1', mp);
-        
-}
-
-/* 
-The structure of the node is
-
-typedef struct node {
-
-	int freq;
-    char data;
-    node * left;
-    node * right;
-    
-} node;
-
-*/
-
-
-void decode_huff(node * root, string s) {
-    
-}
-
-int main() {
-  
-    string s;
-    std::cin >> s;
-  
-    node * tree = huffman_hidden(s);
-    string code = "";
-    map<char, string>mp;
-  
-    print_codes_hidden(tree, code, mp);
-    
-    string coded;
-  
-    for( int i = 0; i < s.length(); i++ ) {
-        coded += mp[s[i]];
-    }
-    
-    decode_huff(tree,coded);
-  
+    myTree.preOrder(root);
     return 0;
 }

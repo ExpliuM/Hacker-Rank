@@ -16,7 +16,7 @@ list(APPEND CPP11_PROJECTS
     coin-change
     compare-the-triplets
     countingsort1
-    tutorial-intro
+    crossword-puzzle
     diagonal-difference
     equal
     fairy-chess
@@ -43,9 +43,10 @@ list(APPEND CPP11_PROJECTS
     time-conversion
     tower-breakers-1
     tree-huffman-decoding
+    tree-preorder-traversal
     truck-tour
-    # crossword-puzzle
-    # zig-zag-sequence
+    tutorial-intro
+    zig-zag-sequence
     )
     
 foreach(proj ${CPP11_PROJECTS})
